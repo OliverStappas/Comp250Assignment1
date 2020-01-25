@@ -18,7 +18,11 @@ public class Hotel {
         }
     }
 
-    public boolean cancelRoom(String roomType) {
-
-    }
+//    public boolean cancelRoom(String roomType) {
+//        for (Room rooms: roomsInHotel) {
+//            rooms.
+//        }
+//
+//
+//    }
 }

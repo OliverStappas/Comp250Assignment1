@@ -13,7 +13,7 @@ public class Airport {
         return this.airportFees;
     }
 
-    private static int getDistance(Airport airport1, Airport airport2) {
+    public static int getDistance(Airport airport1, Airport airport2) {
         return (int) Math.ceil(Math.sqrt(Math.pow((airport1.xCoordinate - airport2.xCoordinate),2) +
                 Math.pow((airport1.yCoordinate - airport2.yCoordinate), 2)));
     }
