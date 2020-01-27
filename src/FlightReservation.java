@@ -3,8 +3,8 @@ public class FlightReservation extends Reservation {
     private Airport arrivalAirport;
 
     public FlightReservation(String reservationName, Airport departure, Airport arrival) {
+        super(reservationName);
         if (Airport.getDistance(departure, arrival) != 0) {
-            super(reservationName);
             this.departureAirport = departure;
             this.arrivalAirport = arrival;
         }
