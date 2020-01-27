@@ -4,20 +4,20 @@ public class Room {
     private boolean roomAvailable;
 
     public Room(String inputRoomType) {
-        if (inputRoomType.equals("double")) {
+        if (inputRoomType.equalsIgnoreCase("double")) {
             this.roomType = inputRoomType;
-            this.roomPrice = 90;
+            this.roomPrice = 9000;
             this.roomAvailable = true;
         }
-        else if (inputRoomType.equals("queen")) {
+        else if (inputRoomType.equalsIgnoreCase("queen")) {
             this.roomType = inputRoomType;
-            this.roomPrice = 110;
+            this.roomPrice = 11000;
             this.roomAvailable = true;
 
         }
-        else if (inputRoomType.equals("king")) {
+        else if (inputRoomType.equalsIgnoreCase("king")) {
             this.roomType = inputRoomType;
-            this.roomPrice = 150;
+            this.roomPrice = 15000;
             this.roomAvailable = true;
 
         }
