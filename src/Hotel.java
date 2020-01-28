@@ -4,7 +4,13 @@ public class Hotel {
 
     public Hotel(String hotelNameInput, Room[] roomsInput) {
         this.hotelName = hotelNameInput;
-        this.roomsInHotel = roomsInput;
+
+        // initializing roomsInHotel field
+        int roomsInputLength = roomsInput.length;
+        this.roomsInHotel = new Room[roomsInputLength];
+        for (int i = 0; i < roomsInputLength; i ++) {
+            this.roomsInHotel[i] = roomsInput[i];
+        }
     }
 
     public int reserveRoom(String roomType) {
@@ -14,7 +20,7 @@ public class Hotel {
             return availableRoom.getPrice();
         }
         else {
-            throw new IllegalArgumentException(); // ???
+            throw new IllegalArgumentException("Fail"); // ???
         }
     }
 
