@@ -2,7 +2,7 @@ public class Basket {
     private Reservation[] Reservations;
 
     public Basket() {
-        this.Reservations = null;
+        this.Reservations = new Reservation[0];
     }
 
     public Reservation[] getProducts() {

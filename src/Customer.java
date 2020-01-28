@@ -18,6 +18,6 @@ public class Customer {
     }
 
     public Basket getBasket() {
-        return this.reservationsBasket.getProducts(); //TODO
+        return this.reservationsBasket; //TODO
     }
 }
