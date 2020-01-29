@@ -10,14 +10,25 @@ public class Basket {
     }
 
     public void add(Reservation inputReservation) {
-        this.Reservations[this.Reservations.length - 1] = inputReservation;
+        this.Reservations = new Reservation[this.Reservations.length + 1];
+        this.Reservations[this.Reservations.length] = inputReservation;
     }
 
     public boolean remove(Reservation inputReservation) {
+        boolean reservationRemoved = false;
         for (int i = 0; i < this.Reservations.length; i++) {
             if (this.Reservations[i].equals(inputReservation)) {
                 this.Reservations[i] = null;
-                return true;
+                reservationRemoved = true;
+            }
+
+            if (reservationRemoved = true) {
+                if (i < (this.Reservations.length - 1)) {
+                    this.Reservations[i] = this.Reservations[i+1];
+                }
+                else {
+                    return true;
+                }
             }
         }
         return false;
