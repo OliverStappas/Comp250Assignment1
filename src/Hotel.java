@@ -20,7 +20,7 @@ public class Hotel {
             return availableRoom.getPrice();
         }
         else {
-            throw new IllegalArgumentException("Fail"); // ???
+            throw new IllegalArgumentException("No room available");
         }
     }
 

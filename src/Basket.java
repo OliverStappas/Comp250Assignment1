@@ -9,9 +9,10 @@ public class Basket {
         return this.Reservations;
     }
 
-    public void add(Reservation inputReservation) {
+    public int add(Reservation inputReservation) {
         this.Reservations = new Reservation[this.Reservations.length + 1];
-        this.Reservations[this.Reservations.length] = inputReservation;
+        this.Reservations[this.Reservations.length - 1] = inputReservation;
+        return this.Reservations.length;
     }
 
     public boolean remove(Reservation inputReservation) {
@@ -22,7 +23,7 @@ public class Basket {
                 reservationRemoved = true;
             }
 
-            if (reservationRemoved == true) {
+            if (reservationRemoved) {
                 if (i < (this.Reservations.length - 1)) {
                     this.Reservations[i] = this.Reservations[i+1];
                 }
@@ -32,7 +33,6 @@ public class Basket {
             }
         }
         return false;
-        //TODO
     }
 
     public void clear() {
