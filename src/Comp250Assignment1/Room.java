@@ -1,3 +1,5 @@
+package Comp250Assignment1;
+
 public class Room {
     private String roomType;
     private int roomPrice;
@@ -69,24 +71,24 @@ public class Room {
     }
 
     public static void main(String[] args) {
-//        Room room1 = new Room("double");
-//        //Room room2 = new Room("dbble");
-//        Room room3 = new Room(room1);
-//        Room room4 = new Room("queen");
+//        Comp250Assignment1.Room room1 = new Comp250Assignment1.Room("double");
+//        //Comp250Assignment1.Room room2 = new Comp250Assignment1.Room("dbble");
+//        Comp250Assignment1.Room room3 = new Comp250Assignment1.Room(room1);
+//        Comp250Assignment1.Room room4 = new Comp250Assignment1.Room("queen");
 //        System.out.println(room4.getPrice());
 //        System.out.println(room4.getType());
 //        System.out.println(room4.getAvailability());
 //        room4.changeAvailability();
 //        System.out.println(room4.getAvailability());
-//        Room room5 = new Room("double");
-//        Room room6 = new Room("queen");
-//        Room room7 = new Room("queen");
-//        Room room8 = new Room("queen");
-//        Room room9 = new Room("double");
-//        Room room10 = new Room("double");
+//        Comp250Assignment1.Room room5 = new Comp250Assignment1.Room("double");
+//        Comp250Assignment1.Room room6 = new Comp250Assignment1.Room("queen");
+//        Comp250Assignment1.Room room7 = new Comp250Assignment1.Room("queen");
+//        Comp250Assignment1.Room room8 = new Comp250Assignment1.Room("queen");
+//        Comp250Assignment1.Room room9 = new Comp250Assignment1.Room("double");
+//        Comp250Assignment1.Room room10 = new Comp250Assignment1.Room("double");
 //        room6.changeAvailability();
 //        room8.changeAvailability();
-//        Room[] roomArray = {room5,room6,room7,room8,room9};
+//        Comp250Assignment1.Room[] roomArray = {room5,room6,room7,room8,room9};
 //        System.out.println(room6);
 //        System.out.println(room7);
 //        System.out.println(findAvailableRoom(roomArray, "queen"));

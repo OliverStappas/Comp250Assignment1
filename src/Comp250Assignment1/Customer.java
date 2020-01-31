@@ -1,3 +1,4 @@
+package Comp250Assignment1;
 
 public class Customer {
     private String name;
@@ -22,12 +23,13 @@ public class Customer {
         return this.reservationsBasket;
     }
 
-    public void addFunds(int centsAdded) {
+    public int addFunds(int centsAdded) {
         if (centsAdded < 0) {
             throw new IllegalArgumentException("Please enter a positive number.");
         }
         else {
             this.balance += centsAdded;
+            return this.balance;
         }
     }
 

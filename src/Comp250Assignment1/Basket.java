@@ -1,3 +1,5 @@
+package Comp250Assignment1;
+
 public class Basket {
     private Reservation[] Reservations;
 

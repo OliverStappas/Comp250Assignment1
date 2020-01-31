@@ -1,3 +1,5 @@
+package Comp250Assignment1;
+
 public abstract class Reservation {
     private String reservationName;
 

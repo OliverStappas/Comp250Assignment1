@@ -1,3 +1,5 @@
+package Comp250Assignment1;
+
 public class FlightReservation extends Reservation {
     private Airport departureAirport;
     private Airport arrivalAirport;
@@ -8,7 +10,6 @@ public class FlightReservation extends Reservation {
             this.departureAirport = departure;
             this.arrivalAirport = arrival;
         }
-
         else {
             throw new IllegalArgumentException("Both airports are the same.");
         }
@@ -16,10 +17,7 @@ public class FlightReservation extends Reservation {
     }
 
     public int getCost() {
-        double distance  = Airport.getDistance(this.arrivalAirport, this.departureAirport);
-        double gallonsOfFuel = distance / 167.52;
-        int flightCost = (int) Math.ceil(gallonsOfFuel * 124);
-        return flightCost;
+        return (int) Math.ceil(((Airport.getDistance(this.departureAirport, this.arrivalAirport) / 167.52 ) * 124) + this.arrivalAirport.getFees() + this.departureAirport.getFees() + 5375) ;
     }
 
     public boolean equals(Object obj) {

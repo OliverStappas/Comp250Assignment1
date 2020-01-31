@@ -1,3 +1,5 @@
+package Comp250Assignment1;
+
 public class HotelReservation extends Reservation {
     private Hotel reservationLocation;
     private String roomType;
@@ -25,7 +27,7 @@ public class HotelReservation extends Reservation {
     // An equals method which takes as input an Object and return true if input matches
     //this in type, name, hotel, room type, number of nights, and total cost. Otherwise
     //the method returns false. Once again, you can ignore the fact that you did not
-    //overrode the equals method in the Hotel class.
+    //overrode the equals method in the Comp250Assignment1.Hotel class.
     public boolean equals(Object obj) {
         if (obj instanceof HotelReservation) {
             if (((HotelReservation) obj).numOfNights == this.numOfNights && ((HotelReservation) obj).reservationLocation == this.reservationLocation
