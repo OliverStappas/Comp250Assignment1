@@ -16,11 +16,27 @@ public class FlightReservation extends Reservation {
     }
 
     public int getCost() {
-        return 5 // TODO
+        double distance  = Airport.getDistance(this.arrivalAirport, this.departureAirport);
+        double gallonsOfFuel = distance / 167.52;
+        int flightCost = (int) Math.ceil(gallonsOfFuel * 124);
+        return flightCost;
     }
 
-    public boolean equals(Object) {
-        if ()
+    public boolean equals(Object obj) {
+        if (obj instanceof FlightReservation) {
+            if (((FlightReservation) obj).reservationName() == this.reservationName() &&
+            ((FlightReservation) obj).getCost() == this.getCost() &&
+            ((FlightReservation) obj).departureAirport == this.departureAirport &&
+            ((FlightReservation) obj).arrivalAirport == this.arrivalAirport) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
     }
 }
 

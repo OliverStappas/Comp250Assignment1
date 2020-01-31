@@ -24,11 +24,13 @@ public class Hotel {
         }
     }
 
-//    public boolean cancelRoom(String roomType) {
-//        for (Room rooms: roomsInHotel) {
-//            rooms.
-//        }
-//
-//
-//    }
+    public boolean cancelRoom(String roomType) {
+        if (Room.makeRoomAvailable(this.roomsInHotel, roomType)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
 }

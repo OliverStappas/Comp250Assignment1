@@ -22,7 +22,7 @@ public class Basket {
                 reservationRemoved = true;
             }
 
-            if (reservationRemoved = true) {
+            if (reservationRemoved == true) {
                 if (i < (this.Reservations.length - 1)) {
                     this.Reservations[i] = this.Reservations[i+1];
                 }

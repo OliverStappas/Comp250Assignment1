@@ -11,6 +11,6 @@ public abstract class Reservation {
 
     public abstract int getCost();
 
-    public abstract boolean equals(Object);
+    public abstract boolean equals(Object obj);
 
 }

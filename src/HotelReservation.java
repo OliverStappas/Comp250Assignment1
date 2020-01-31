@@ -22,8 +22,27 @@ public class HotelReservation extends Reservation {
     }
 
     @Override
+    // An equals method which takes as input an Object and return true if input matches
+    //this in type, name, hotel, room type, number of nights, and total cost. Otherwise
+    //the method returns false. Once again, you can ignore the fact that you did not
+    //overrode the equals method in the Hotel class.
     public boolean equals(Object obj) {
-//TODO
+        if (obj instanceof HotelReservation) {
+            if (((HotelReservation) obj).numOfNights == this.numOfNights && ((HotelReservation) obj).reservationLocation == this.reservationLocation
+                    && ((HotelReservation) obj).roomPrice == this.roomPrice && ((HotelReservation) obj).roomType == this.roomType
+                    && ((HotelReservation) obj).getCost() == this.getCost() && ((HotelReservation) obj).reservationName() == this.reservationName()
+                    && ((HotelReservation) obj).reservationLocation == this.reservationLocation )
+            {
+
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        } else {
+            return false;
+        }
     }
 
 }
