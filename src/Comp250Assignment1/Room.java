@@ -43,9 +43,6 @@ public class Room {
         return this.roomPrice;
     }
 
-//    public boolean getAvailability() {
-//        return this.roomAvailable;
-//    }
 
     public void changeAvailability() {
         this.roomAvailable = !this.roomAvailable;

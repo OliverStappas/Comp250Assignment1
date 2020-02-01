@@ -12,7 +12,8 @@ public class Hotel {
         int roomsInputLength = roomsInput.length;
         this.roomsInHotel = new Room[roomsInputLength];
         for (int i = 0; i < roomsInputLength; i ++) {
-            this.roomsInHotel[i] = roomsInput[i];
+            Room temp = new Room(roomsInput[i]);
+            this.roomsInHotel[i] = temp;
         }
     }
 

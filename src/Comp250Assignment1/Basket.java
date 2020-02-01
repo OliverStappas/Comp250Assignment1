@@ -12,8 +12,14 @@ public class Basket {
     }
 
     public int add(Reservation inputReservation) {
+        Reservation[] temp = this.Reservations;
+
         this.Reservations = new Reservation[this.Reservations.length + 1];
         this.Reservations[this.Reservations.length - 1] = inputReservation;
+
+        if (this.Reservations.length - 1 >= 0)
+            System.arraycopy(temp, 0, this.Reservations, 0, this.Reservations.length - 1);
+
         return this.Reservations.length;
     }
 
@@ -27,9 +33,11 @@ public class Basket {
 
             if (reservationRemoved) {
                 if (i < (this.Reservations.length - 1)) {
-                    this.Reservations[i] = this.Reservations[i+1];
-                }
-                else {
+                    this.Reservations[i] = this.Reservations[i + 1];
+                } else {
+                    Reservation[] temp = this.Reservations;
+                    this.Reservations = new Reservation[this.Reservations.length - 1];
+                    System.arraycopy(temp, 0, this.Reservations, 0, this.Reservations.length);
                     return true;
                 }
             }
@@ -38,9 +46,7 @@ public class Basket {
     }
 
     public void clear() {
-        for (Reservation reservation : this.Reservations) {
-            reservation = null;
-        }
+        this.Reservations = new Reservation[0];
     }
 
     public int getNumOfReservations() {

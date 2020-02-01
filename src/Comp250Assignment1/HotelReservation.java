@@ -20,7 +20,7 @@ public class HotelReservation extends Reservation {
     }
 
     public int getCost() {
-        return roomPrice * numOfNights;
+        return this.roomPrice * this.numOfNights;
     }
 
     @Override
@@ -30,10 +30,10 @@ public class HotelReservation extends Reservation {
     //overrode the equals method in the Comp250Assignment1.Hotel class.
     public boolean equals(Object obj) {
         if (obj instanceof HotelReservation) {
-            if (((HotelReservation) obj).numOfNights == this.numOfNights && ((HotelReservation) obj).reservationLocation == this.reservationLocation
-                    && ((HotelReservation) obj).roomPrice == this.roomPrice && ((HotelReservation) obj).roomType == this.roomType
-                    && ((HotelReservation) obj).getCost() == this.getCost() && ((HotelReservation) obj).reservationName() == this.reservationName()
-                    && ((HotelReservation) obj).reservationLocation == this.reservationLocation )
+            if (((HotelReservation) obj).numOfNights == this.numOfNights && ((HotelReservation) obj).reservationLocation.equals(this.reservationLocation)
+                    && ((HotelReservation) obj).roomPrice == this.roomPrice && ((HotelReservation) obj).roomType.equals(this.roomType)
+                    && ((HotelReservation) obj).getCost() == this.getCost() && ((HotelReservation) obj).reservationName().equals(this.reservationName())
+                    && ((HotelReservation) obj).reservationLocation.equals(this.reservationLocation) )
             {
 
                 return true;

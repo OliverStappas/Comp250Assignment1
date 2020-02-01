@@ -7,6 +7,6 @@ public class BnBReservation extends HotelReservation {
     }
 
     public int getCost() {
-        return (super.getCost() + 10 * this.getNumOfNights());
+        return (super.getCost() + 1000 * this.getNumOfNights());
     }
 }
