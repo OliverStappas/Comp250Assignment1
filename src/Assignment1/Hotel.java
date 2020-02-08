@@ -1,9 +1,8 @@
-package Comp250Assignment1;
+package Assignment1;
 
 public class Hotel {
     private String hotelName;
     private Room[] roomsInHotel;
-    //Error: Hotel constructor doesn't make an array of Rooms that is a deep copy or reserveRoom doesn't work.
 
     public Hotel(String hotelNameInput, Room[] roomsInput) {
         this.hotelName = hotelNameInput;

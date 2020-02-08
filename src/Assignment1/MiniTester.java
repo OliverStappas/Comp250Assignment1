@@ -1,4 +1,4 @@
-package Comp250Assignment1;
+package Assignment1;
 
 import java.lang.reflect.Field;
 
@@ -300,9 +300,29 @@ public class MiniTester
 			e.printStackTrace();
 			write(gradeString(0, maxScore, comment));
 		}
-		
+
+
+//        Airport airport1 = new Airport(1,1,3);
+//        Airport airport2 = new Airport(2,2,5);
+//        Airport airport3 = new Airport(13,13,33);
+//
+//        FlightReservation a = new FlightReservation("S",airport1,airport2);
+//        FlightReservation b = new FlightReservation("S",airport1,airport2);
+//        FlightReservation c = new FlightReservation("S",airport1,airport3);
+//        FlightReservation d = new FlightReservation("A",airport1,airport3);
+//
+//
+//        System.out.println(a.equals(b));
+//        System.out.println(a.equals(c));
+//        System.out.println(b.equals(c));
+//        System.out.println(c.equals(d));
 		return grade;
-	}
+
+
+
+
+
+    }
     
     public int testHotelReservation_0(int testIdx) {
 		String comment = "[" + testIdx + "]: Test whether room is reserved when a HotelReservation is made.\n";
@@ -418,27 +438,41 @@ public class MiniTester
 			Airport a2 = new Airport(8, 50000, 10000);
 			FlightReservation r1 = new FlightReservation("myReservation", a1, a2);
 			FlightReservation r2 = new FlightReservation("secondReservation", a2, a1);
-			
-			b1.add(r1);
-			Reservation[] myReservations = b1.getProducts();
+            System.out.println(b1.getTotalCost());
+
+            System.out.println(b1.add(r1));
+            System.out.println(b1.getTotalCost());
+
+            Reservation[] myReservations = b1.getProducts();
 			if (r1.equals(myReservations[0])) grade += 1;
 			else {
 				comment = comment + "Error: add in Basket doesn't add a Reservation if the basket is empty at first.\n";
 			}
-			b1.add(r2);
-			myReservations = b1.getProducts();
+            System.out.println(b1.add(r2));
+            System.out.println(b1.getTotalCost());
+
+            myReservations = b1.getProducts();
 			if (r2.equals(myReservations[1]) && r1.equals(myReservations[0])) grade += 2;
 			else {
 				comment = comment + "Error: add in Basket doesn't add to the end of the list.\n";
 			}
-			
-			write(gradeString(grade, maxScore, comment));
+            System.out.println(b1.getNumOfReservations());
+            System.out.println(b1.getTotalCost());
+
+            b1.clear();
+            System.out.println(b1.getNumOfReservations());
+            System.out.println(b1.getTotalCost());
+
+
+            write(gradeString(grade, maxScore, comment));
 			
 		} catch (Exception e) {
 			comment = comment + "Exception Found: " + e.toString() + "\n";
 			e.printStackTrace();
 			write(gradeString(0, maxScore, comment));
 		}
+
+
 		
 		return grade;
     }

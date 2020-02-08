@@ -1,4 +1,4 @@
-package Comp250Assignment1;
+package Assignment1;
 
 public class Airport {
     private int xCoordinate;

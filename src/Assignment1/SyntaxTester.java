@@ -1,4 +1,4 @@
-package Comp250Assignment1;
+package Assignment1;
 
 import java.lang.reflect.*;
 import java.util.ArrayList;

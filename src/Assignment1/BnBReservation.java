@@ -1,4 +1,4 @@
-package Comp250Assignment1;
+package Assignment1;
 
 public class BnBReservation extends HotelReservation {
     public BnBReservation(String reservationName, Hotel hotel, String inputRoomType, int numberOfNights) {

@@ -1,4 +1,4 @@
-package Comp250Assignment1;
+package Assignment1;
 
 public class FlightReservation extends Reservation {
     private Airport departureAirport;
@@ -20,7 +20,7 @@ public class FlightReservation extends Reservation {
 
     public boolean equals(Object obj) {
         if (obj instanceof FlightReservation) {
-            if (((FlightReservation) obj).reservationName() == this.reservationName() &&
+            if (((FlightReservation) obj).reservationName().equalsIgnoreCase(this.reservationName()) &&
             ((FlightReservation) obj).getCost() == this.getCost() &&
             ((FlightReservation) obj).departureAirport == this.departureAirport &&
             ((FlightReservation) obj).arrivalAirport == this.arrivalAirport) {

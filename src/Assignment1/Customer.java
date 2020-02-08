@@ -1,4 +1,4 @@
-package Comp250Assignment1;
+package Assignment1;
 
 public class Customer {
     private String name;
@@ -34,7 +34,7 @@ public class Customer {
     }
 
     public int addToBasket(Reservation reservation) {
-        if (reservation.reservationName().equals(this.name)) {
+        if (reservation.reservationName().equalsIgnoreCase(this.name)) {
             this.reservationsBasket.add(reservation);
             return this.reservationsBasket.getNumOfReservations();
         }
