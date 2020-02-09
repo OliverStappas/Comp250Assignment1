@@ -20,15 +20,10 @@ public class FlightReservation extends Reservation {
 
     public boolean equals(Object obj) {
         if (obj instanceof FlightReservation) {
-            if (((FlightReservation) obj).reservationName().equalsIgnoreCase(this.reservationName()) &&
-            ((FlightReservation) obj).getCost() == this.getCost() &&
-            ((FlightReservation) obj).departureAirport == this.departureAirport &&
-            ((FlightReservation) obj).arrivalAirport == this.arrivalAirport) {
-                return true;
-            }
-            else {
-                return false;
-            }
+            return ((FlightReservation) obj).reservationName().equalsIgnoreCase(this.reservationName()) &&
+                    ((FlightReservation) obj).getCost() == this.getCost() &&
+                    ((FlightReservation) obj).departureAirport.equals(this.departureAirport) &&
+                    ((FlightReservation) obj).arrivalAirport.equals(this.arrivalAirport);
         }
         else {
             return false;

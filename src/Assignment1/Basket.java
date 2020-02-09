@@ -8,7 +8,7 @@ public class Basket {
     }
 
     public Reservation[] getProducts() {
-        return this.Reservations;
+        return this.Reservations.clone();
     }
 
     public int add(Reservation inputReservation) {

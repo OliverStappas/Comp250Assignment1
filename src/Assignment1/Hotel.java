@@ -28,12 +28,7 @@ public class Hotel {
     }
 
     public boolean cancelRoom(String roomType) {
-        if (Room.makeRoomAvailable(this.roomsInHotel, roomType)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return Room.makeRoomAvailable(this.roomsInHotel, roomType);
 
     }
 }

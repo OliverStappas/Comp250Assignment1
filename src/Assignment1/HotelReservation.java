@@ -13,15 +13,6 @@ public class HotelReservation extends Reservation {
         this.reservationLocation = hotel;
         this.roomPrice = hotel.reserveRoom(inputRoomType);
 
-        ////??? A constructor that takes as input a String with the name on the reservation, a
-        //Hotel, a String with the room type, and an int indicating the number of nights.
-        //The constructor uses the inputs to create a Reservation and initialize the corre-
-        //sponding elds. The constructor should also make sure to reserve a room of the
-        //correct type in the specied hotel. If such reservation is not possible, then an
-        //IllegalArgumentException should be raised.
-
-
-
     }
 
     public int getNumOfNights() {
@@ -37,7 +28,7 @@ public class HotelReservation extends Reservation {
     public boolean equals(Object obj) {
         if (obj instanceof HotelReservation) {
             return ((HotelReservation) obj).numOfNights == this.numOfNights && ((HotelReservation) obj).reservationLocation.equals(this.reservationLocation)
-                    && ((HotelReservation) obj).roomPrice == this.roomPrice && ((HotelReservation) obj).roomType.equalsIgnoreCase(this.roomType)
+                    && ((HotelReservation) obj).roomType.equalsIgnoreCase(this.roomType)
                     && ((HotelReservation) obj).getCost() == this.getCost() && ((HotelReservation) obj).reservationName().equalsIgnoreCase(this.reservationName())
                     && ((HotelReservation) obj).reservationLocation.equals(this.reservationLocation);
 

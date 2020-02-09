@@ -25,7 +25,7 @@ public class Customer {
 
     public int addFunds(int centsAdded) {
         if (centsAdded < 0) {
-            throw new IllegalArgumentException("Please enter a positive number.");
+            throw new IllegalArgumentException("Negative number entered.");
         }
         else {
             this.balance += centsAdded;
